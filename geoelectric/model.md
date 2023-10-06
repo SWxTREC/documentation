@@ -38,7 +38,7 @@ detail can be found in the associated references.
 
 There are two input datasets required to calculate the estimated geoelectric fields: geomagnetic field data and magnetotelluric impedances.
 
-1. **Geomagnetic field** data is provided by the [USGS Geomagnetism Group](https://geomag.usgs.gov)
+1. **Geomagnetic field** data is provided by the [USGS Geomagnetism Program](https://geomag.usgs.gov)
    The data are accessed via [SWx TREC's Space Weather Data Portal](https://lasp.colorado.edu/space-weather-portal).
 
 2. **Magnetotelluric impedances** are provided by the USGS on a gridded domain
@@ -90,13 +90,11 @@ https://doi.org/10.1029/2019SW002329
 
 **Greg Lucas:** Model creator and cloud storage solutions
 
-**Anna Kelbert:** Gridded impedances
-
-**Josh Rigler:** Magnetic field interpolations
-
 **Brandon Stone:** Back-end software development
 
 **Jennifer Knuth:** Front-end and visualization
+
+**USGS Collaborators:** Assistance with gridded impedances and magnetic field interpolations
 
 We acknowledge support for this work from NASA grant 80NSSC20K1477
 "Pushing the Frontiers of Operational Geoelectric Hazard Modeling".
