@@ -79,11 +79,47 @@ model run to produce the predictions.
 
 ## References
 
+General references for this work are given below, with other
+more specific references and citations contained within these works.
+
+### Geoelectric Hazard Calculations
+
 ```bibtex
 Lucas, G., Love, J. J., Kelbert, A., Bedrosian, P. A., & Rigler, E. J. (2020).
 A 100-year geoelectric hazard analysis for the U.S. high-voltage power grid.
 Space Weather, 18, e2019SW002329.
 https://doi.org/10.1029/2019SW002329
+```
+
+```bibtex
+Love, J. J., Lucas, G. M., Kelbert, A., & Bedrosian, P. A. (2018).
+Geoelectric hazard maps for the Mid-Atlantic United States:
+100 year extreme values and the 1989 magnetic storm.
+Geophysical Research Letters, 44.
+https://doi.org/10.1002/2017GL076042
+```
+
+### Conductivity Models
+
+```bibtex
+Kelbert, A. The Role of Global/Regional Earth Conductivity Models in Natural Geomagnetic Hazard Mitigation.
+Surv Geophys 41, 115–166 (2020).
+https://doi.org/10.1007/s10712-019-09579-z
+```
+
+### Geomagnetic Interpolation
+
+```bibtex
+Rigler, E.J., Fiori, R.A.D., Pulkkinen, A.A., Wiltberger, M. and Balch, C. (2019).
+Interpolating Geomagnetic Observations.
+In Geomagnetically Induced Currents from the Sun to the Power Grid (eds J.L. Gannon, A. Swidinsky and Z. Xu).
+https://doi.org/10.1002/9781119434412.ch2
+```
+
+```bibtex
+Amm, O., and A. Viljanen. "Ionospheric disturbance magnetic field continuation
+from the ground to the ionosphere using spherical elementary current systems."
+Earth, Planets and Space 51.6 (1999): 431-440. doi:10.1186/BF03352247
 ```
 
 ## Credits
@@ -94,7 +130,10 @@ https://doi.org/10.1029/2019SW002329
 
 **Jennifer Knuth:** Front-end and visualization
 
-**USGS Collaborators:** Assistance with gridded impedances and magnetic field interpolations
+**USGS Collaborators:**
+
+* **Anna Kelbert** Assistance with gridded impedances
+* **Josh Rigler** Magnetic field interpolations
 
 We acknowledge support for this work from NASA grant 80NSSC20K1477
 "Pushing the Frontiers of Operational Geoelectric Hazard Modeling".
