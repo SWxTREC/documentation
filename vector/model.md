@@ -2,7 +2,7 @@
 
 ## Overview
 
-The VECTOR code is publicly available on our [GitHub repository](https://github.com/SWxTREC/vector). VECTOR uses the Semi-Empirical Satellite Accommodation coefficient Model
+The VECTOR code is publicly available on our [GitHub repository](https://github.com/SWxTREC/vector-code). VECTOR uses the Semi-Empirical Satellite Accommodation coefficient Model
 (SESAM) to calculate the coefficient of drag, projected area,
 and force coefficient from a given set of input parameters.
 The code was developed by Marcin Pilinski and the theoretical framework
