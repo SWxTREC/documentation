@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "LiveDst API",
-    "description": "The LiveDst API enables easier public access to the live Dst predictions made\nby CU's space weather machine learning group.\n\nSome useful links:\n- [LiveDst plots](https://swx-trec.com/dst)\n- [The SWx TREC Model Staging Platform](https://swx-trec.com)",
+    "title": "Live Dst API",
+    "description": "The Live Dst API enables easier public access to the live Dst predictions made\nby CU's space weather machine learning group.\n\nSome useful links:\n- [Live Dst plots](https://swx-trec.com/dst)\n- [Related space weather tools and applications](https://swx-trec.com)",
     "contact": {
       "email": "greg.lucas@lasp.colorado.edu"
     },
@@ -63,7 +63,6 @@
         ],
         "summary": "Get predictions grouped by model-time",
         "description": "Group model results by the model run time (model0, model1, ..., modelN)",
-        "operationId": "findPetsByTags",
         "parameters": [
           {
             "$ref": "#/components/parameters/startTime"
