@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Live Dst API",
-    "description": "The Live Dst API enables easier public access to the live Dst predictions made\nby CU's space weather machine learning group.\n\nSome useful links:\n- [Live Dst plots](https://swx-trec.com/dst)\n- [Related space weather tools and applications](https://swx-trec.com)",
+    "description": "The Live Dst API enables easier public access to the real time Dst predictions made\nby CU's space weather machine learning group.\n\nSome useful links:\n- [Live Dst plots](https://swx-trec.com/dst)\n- [Related space weather tools and applications](https://swx-trec.com)",
     "contact": {
       "email": "greg.lucas@lasp.colorado.edu"
     },
