@@ -1,0 +1,296 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Live Dst API",
+    "description": "The Live Dst API enables easier public access to the real time Dst predictions made\nby CU's space weather machine learning group.\n\nSome useful links:\n- [Live Dst plots](https://swx-trec.com/dst)\n- [Related space weather tools and applications](https://swx-trec.com)",
+    "contact": {
+      "email": "greg.lucas@lasp.colorado.edu"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://livedst-api.prod.swx-trec.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "livedst",
+      "description": "LiveDst model results"
+    }
+  ],
+  "paths": {
+    "/livedst_hour": {
+      "get": {
+        "tags": [
+          "livedst"
+        ],
+        "summary": "Get predictions grouped by time-ahead",
+        "description": "Group model results by the prediction ahead interval (t+1, t+2, ..., t+N)",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/startTime"
+          },
+          {
+            "$ref": "#/components/parameters/endTime"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HourResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          }
+        }
+      }
+    },
+    "/livedst_model": {
+      "get": {
+        "tags": [
+          "dst"
+        ],
+        "summary": "Get predictions grouped by model-time",
+        "description": "Group model results by the model run time (model0, model1, ..., modelN)",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/startTime"
+          },
+          {
+            "$ref": "#/components/parameters/endTime"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "endTime": {
+        "name": "time<=",
+        "in": "query",
+        "description": "End time of the query",
+        "required": false,
+        "explode": true,
+        "schema": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2023-09-01T00:00"
+        }
+      },
+      "startTime": {
+        "name": "time>=",
+        "in": "query",
+        "description": "Start time of the query",
+        "required": false,
+        "explode": true,
+        "schema": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2023-09-01T00:00"
+        }
+      }
+    },
+    "schemas": {
+      "HourResponse": {
+        "type": "object",
+        "properties": {
+          "predictions": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "time": {
+                    "type": "object",
+                    "properties": {
+                      "units": {
+                        "type": "string",
+                        "example": "milliseconds since 1970-01-01"
+                      },
+                      "length": {
+                        "type": "integer",
+                        "example": 1
+                      }
+                    }
+                  },
+                  "pred_hr0": {
+                    "type": "object",
+                    "properties": {
+                      "missing_value": {
+                        "type": "string",
+                        "example": "99999.99"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Equatorial Dst Index Prediction"
+                      },
+                      "units": {
+                        "type": "string",
+                        "example": "nT"
+                      }
+                    }
+                  },
+                  "std_hr0": {
+                    "type": "object",
+                    "properties": {
+                      "missing_value": {
+                        "type": "string",
+                        "example": "99999.99"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Standard Deviation of the Equatorial Dst Index Predictions"
+                      },
+                      "units": {
+                        "type": "string",
+                        "example": "nT"
+                      }
+                    }
+                  }
+                }
+              },
+              "parameters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": [
+                  "time",
+                  "pred_hr0",
+                  "std_hr0"
+                ]
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "example": [
+                    1700161200000,
+                    1.2,
+                    3.4
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "ModelResponse": {
+        "type": "object",
+        "properties": {
+          "predictions": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "time": {
+                    "type": "object",
+                    "properties": {
+                      "units": {
+                        "type": "string",
+                        "example": "milliseconds since 1970-01-01"
+                      },
+                      "length": {
+                        "type": "integer",
+                        "example": 1
+                      }
+                    }
+                  },
+                  "pred_model0": {
+                    "type": "object",
+                    "properties": {
+                      "missing_value": {
+                        "type": "string",
+                        "example": "99999.99"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Equatorial Dst Index Prediction"
+                      },
+                      "units": {
+                        "type": "string",
+                        "example": "nT"
+                      }
+                    }
+                  },
+                  "std_model0": {
+                    "type": "object",
+                    "properties": {
+                      "missing_value": {
+                        "type": "string",
+                        "example": "99999.99"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Standard Deviation of the Equatorial Dst Index Predictions"
+                      },
+                      "units": {
+                        "type": "string",
+                        "example": "nT"
+                      }
+                    }
+                  }
+                }
+              },
+              "parameters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "example": [
+                  "time",
+                  "pred_model0",
+                  "std_model0"
+                ]
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "example": [
+                    1700161200000,
+                    1.2,
+                    3.4
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
