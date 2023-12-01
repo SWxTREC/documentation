@@ -1,4 +1,4 @@
-# Geoelectric Field Model
+# LiveWire Geoelectric Field Model
 
 An estimate of the geoelectric field for the past 24-hours, updated every hour.
 
