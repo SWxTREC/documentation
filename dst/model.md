@@ -116,6 +116,8 @@ Jennifer Knuth: front-end and visualization
 
 Greg Lucas: cloud storage solutions
 
+Tom Berger: forecasting conops development
+
 We acknowledge support for this work from NASA grant 80NSSC20K1580.
 
 ## Contacts
