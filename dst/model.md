@@ -5,7 +5,7 @@ LiveDst is a machine learning (ML) model that predicts the Dst geomagnetic distu
  
 LiveDst is run at 45 minutes past the hour and gives 1-, 2-, 3-, 4-, 5- and 6-hour predictions of the Real Time Dst index with quantified uncertainties that are valid at the top of the hour. For instance, the model run at 13:45 UT produces predictions that are valid for 14:00 UT and beyond. Only the 6-hour prediction is shown by default on the plot – to see the other plots go to “Add Plots” and select “LiveDst Model Runs” from the options. 
  
-The model is based on multi-fidelity boosted neural networks (Hu, Camporeale, Swiger, 2022, https://doi.org/10.1029/2022SW003286), that ingest real-time data solar wind observed by ACE at the 1st Lagrangian point (https://www.swpc.noaa.gov/products/ace-real-time-solar-wind). In addition, the time history of Dst is used.
+The model is based on multi-fidelity boosted neural networks (Hu, Camporeale, Swiger, 2022), that ingest real-time data solar wind observed by ACE at the 1st Lagrangian point (https://www.swpc.noaa.gov/products/ace-real-time-solar-wind). In addition, the time history of Dst is used.
  
 
 ## Operational set up
