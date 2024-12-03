@@ -1,10 +1,12 @@
 # Dst Model Description
 
 ## Overview
-LiveDst is a model for real-time predictions of the Dst Geomagnetic index. The 'ground-truth' for Dst is assumed to be the one issued by the World Data Center for Geomagnetism, Kyoto (https://wdc.kugi.kyoto-u.ac.jp/dstdir/). These are Quicklook Dst values and as such, these values are unverified, may contain inaccuracies, and are subject to change.
-
-LiveDst predicts Dst from 1 to 6 hours ahead, with associated probabilities.
-The model is based on **multi-fidelity boosted neural networks** (Hu, Camporeale, Swiger, 2022), that ingest real-time data solar wind observed by ACE at the 1st Lagrangian point (https://www.swpc.noaa.gov/products/ace-real-time-solar-wind). In addition, the time history of Dst is used.
+LiveDst is a machine learning (ML) model that predicts the Dst geomagnetic disturbance index in real time. The target for the model is the Real Time (Quicklook) Dst value published by the World Data Center for Geomagnetism in Kyoto, Japan (Kyoto (https://wdc.kugi.kyoto-u.ac.jp/dstdir/). These Real Time values may be adjusted later to Provisional or Final index values that differ slightly from the Real Time values used by the LiveDst model but are generally not available when the LiveDst mode is run.
+ 
+LiveDst is run at 45 minutes past the hour and gives 1-, 2-, 3-, 4-, 5- and 6-hour predictions of the Real Time Dst index with quantified uncertainties that are valid at the top of the hour. Only the 6-hour prediction is shown by default on the plot – to see the other plots go to “Add Plots” and select “LiveDst Model Runs” from the options. For instance, the model run at 13:45 UT produces predictions that are valid for 14:00 UT and beyond.
+ 
+The model is based on multi-fidelity boosted neural networks (Hu, Camporeale, Swiger, 2022, https://doi.org/10.1029/2022SW003286), that ingest real-time data solar wind observed by ACE at the 1st Lagrangian point (https://www.swpc.noaa.gov/products/ace-real-time-solar-wind). In addition, the time history of Dst is used.
+ 
 
 ## Operational set up
 The model requires the latest observed Dst to produce a forecast. However, that value is not immediately available at the top of an hour. Hence, the model runs **every 15, 30, 45 minutes past the hour**, checking if the Dst for that hour has been released from Kyoto. However, in the current version, forecasts are always issued for top of the hour times, regardless of when they where issued (hence, they are effectively less than 6 hours ahead). This feature will be improved in future releases.
