@@ -1,7 +1,7 @@
 # Dst Model Description
 
 ## Overview
-LiveDst is a machine learning (ML) model that predicts the Dst geomagnetic disturbance index in real time. The target for the model is the Real Time (Quicklook) Dst value published by the World Data Center for Geomagnetism in Kyoto, Japan (Kyoto (https://wdc.kugi.kyoto-u.ac.jp/dstdir/). These Real Time values may be adjusted later to Provisional or Final index values that differ slightly from the Real Time values used by the LiveDst model but are generally not available when the LiveDst mode is run.
+LiveDst is a machine learning (ML) model that predicts the Dst geomagnetic disturbance index in real time. The target for the model is the Real Time Dst value published by the World Data Center for Geomagnetism in Kyoto, Japan (Kyoto (https://wdc.kugi.kyoto-u.ac.jp/dstdir/). These Real Time values may be adjusted later to Quicklook, Provisional, or Final index values that differ slightly from the Real Time values used by the LiveDst model but are generally not available when the LiveDst mode is run.
  
 LiveDst is run at 45 minutes past the hour and gives 1-, 2-, 3-, 4-, 5- and 6-hour predictions of the Real Time Dst index with quantified uncertainties that are valid at the top of the hour. Only the 6-hour prediction is shown by default on the plot – to see the other plots go to “Add Plots” and select “LiveDst Model Runs” from the options. For instance, the model run at 13:45 UT produces predictions that are valid for 14:00 UT and beyond.
  
