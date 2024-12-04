@@ -9,24 +9,22 @@ The model is based on multi-fidelity boosted neural networks (Hu, Camporeale, & 
  
 
 ## Operational set up
-The model requires the latest observed Dst to produce a forecast. However, that value is not immediately available at the top of an hour. Hence, the model runs **every 15, 30, 45 minutes past the hour**, checking if the Dst for that hour has been released from Kyoto. However, in the current version, forecasts are always issued for top of the hour times, regardless of when they where issued (hence, they are effectively less than 6 hours ahead). This feature will be improved in future releases.
-
-Also, notice that it might occur that a given Quicklook Dst value can later be changed, even within the same hour. In that circumstance, one will notice a discrepancy in the top panel between the last value shown as a blue line (observed Dst) and the first value shown as a black line (predicted Dst). Those differences can be tracked in the timeseries labeled **Observed Dst at time of model run** (see below).
+The model requires the latest hourly Real Time Dst value from Kyoto to produce a forecast. However, that value is not immediately available at the top of an hour. Hence, the model runs **every 45 minutes past the hour**, checking to see if the Real Time Dst for that hour has been released from Kyoto. However, as in terrestrial weather forecasts, the forecast produced at 45 minutes past the hour is valid only for the top of the next hour and beyond. 
 
 
 ## Input Data
-The following inputs are ingested by the neural networks: solar wind density, velocity, amplitude of Interplanetary Magnetic Field (IMF), z-component of IMF, IMF clock angle, Earth's dipole tilt angle, and Dst. Solar wind quantities and IMF are taken in real-time from https://services.swpc.noaa.gov/text/ and the Dst index from the World Data Center for Geomagnetism, Kyoto (https://wdc.kugi.kyoto-u.ac.jp/dstdir/).
+The following inputs are ingested by the neural networks: solar wind density, velocity, amplitude of Interplanetary Magnetic Field (IMF), z-component of IMF, IMF clock angle, Earth's dipole tilt angle, and Real Time Dst values. Solar wind quantities and IMF are taken in real-time from https://services.swpc.noaa.gov/text/ and the Dst index from the World Data Center for Geomagnetism, Kyoto (https://wdc.kugi.kyoto-u.ac.jp/dstdir/).
 See the reference paper (Hu, Camporeale, Swiger, 2022) for details.
 
 
 ## Output Data
 The model outputs predictions in terms of Gaussian distributions, where the **LiveDst prediction**, shown as a continuous line is the mean of the Gaussian distribution, and the shaded area is one standard deviation. In other words, the model predicts a 68% probability for Dst to lie within the shaded region.
 
-In the default settings, the top panel shows the observed Dst for the past 24 hours, and the predicted Dst for the future 6 hours (prediction are always made for the top of the hour), each shown with its confidence interval (one standard deviation).
-However, the user has the possibility to overlay predictions made with **different time lags** (t+1, t+2,... t+6 being 1, 2,...,6 hours ahead).
-The timeseries labeled **Observed Dst at time of model run** shows the Dst used as inputs and available at the time when the predictions were issued. Sometimes those values are adjusted at later times.
+In the default settings, the top panel shows the observed Real Time Dst for the past 24 hours, and the model predicted Dst for the future 6 hours (prediction are always made for the top of the hour), each shown with its confidence interval (one standard deviation).
+However, the user can overlay predictions made with **different lead times** (t+1, t+2,... t+6 being 1, 2,...,6 hours ahead).
+The timeseries labeled **Kyoto Data // Real Time Dst (nT)** shows the Dst (in units of nanoTesla) used as inputs and available at the time when the model was run. 
 
-Finally, the Dst predicted from the U. Michigan Geospace model, run operationally at the NOAA Space Weather Prediction Center (https://www.swpc.noaa.gov/products/geospace-geomagnetic-activity-plot) can be shown, labeled as **Michigan Geospace V2 model results**. Note that that is not the official SWPC forecast, instead it is a model guidance which forecasters can use to assist them in generating the official forecast. Real-time outputs are obtained from https://nomads.ncep.noaa.gov/pub/data/nccf/com/swmf/prod/, while historical storms have been simulated offline by Qusai Al Shidi at the University of Michigan (those results have been reported in Al Shidi et al., 2022).
+Finally, the Dst predicted from the U. Michigan Geospace model, run operationally at the NOAA Space Weather Prediction Center (https://www.swpc.noaa.gov/products/geospace-geomagnetic-activity-plot) can be shown, labeled as **Michigan Geospace V2 model results**. Note that that is not the official SWPC forecast, instead it is a model guidance which forecasters can use to assist them in generating the official forecast. Real-time outputs are obtained from https://nomads.ncep.noaa.gov/pub/data/nccf/com/swmf/prod/, while historical storms have been simulated offline by Qusai Al Shidi at the University of Michigan (those results have been reported in Al Shidi et al., 2022). The user can also display the Temerin & Li Dst prediction (Temerin & Li, 2002).
 
 
 <!--
@@ -104,6 +102,8 @@ Example: `DstModel_v0.0.2_20031130T230000_1H_7d79096db134.nc`
 A. Hu, E. Camporeale, B. Swiger (2022) **Multi-Hour Ahead Dst Index Prediction Using Multi-Fidelity Boosted Neural Networks**, Space Weather, 21, 4,  https://doi.org/10.1029/2022SW003286
 
 Al Shidi, Q., Pulkkinen, T., Toth, G., Brenner, A., Zou, S., & Gjerloev, J. (2022). **A Large Simulation Set of Geomagnetic Storms–Can Simulations Predict Ground Magnetometer Station Observations of Magnetic Field Perturbations?**, *Space Weather*, https://doi.org/10.1029/2022SW003049
+
+Temerin, M. & Li, X., (2002). **A new model for the prediction of Dst  on the basis of the solar wind**, *JGR Space Physics*, 107, A12, https://doi.org/10.1029/2001JA007532
 
 ## Credits
 Enrico Camporeale: original idea and project supervision
