@@ -9,7 +9,7 @@ geoelectric field over the past 24-hours across the United States of America.
 It is a real-time implementation of the historical hazard analyses which
 have been produced by the United States Geological Survey (USGS).
 
-## Operational set up
+## Operational setup
 
 The model requires the latest ground magnetic field data to produce a forecast. Which is downloaded every model run. The model runs **every 30 minutes past the hour**. The model has several calculation steps that are outlined below, but more
 detail can be found in the associated references.
@@ -30,9 +30,14 @@ detail can be found in the associated references.
 
 4. **Calculate the geoelectric field at all grid locations**
    We calculate the geoelectric field as a convolution of the
-   magnetic field with magnetotelluric impedance at that grid point.
+   magnetic field with magnetotelluric impedance at that grid point at a 1-minute cadence.
    We use the [bezpy](10.5281/zenodo.3765860) Python package for these
    calculations.
+
+5. **Calculate maximum geoelectric field over time**
+   For visualization purposes, we calculate the maximum value of the absolute value of the
+   geoelectric field over a 1-hour time period, **max(abs(Eh))**. This tells us what the estimated
+   worst-case scenario is as a function of time at each grid point.
 
 ## Input Data
 
