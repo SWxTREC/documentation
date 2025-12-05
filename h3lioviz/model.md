@@ -119,7 +119,7 @@ Use "Divergent" or "Cool to warm" scales with the variable since it can have bot
 ### CME tracer
 
 ### SWPC default colormap
-The custom color scale seen on the traditional Enlil product produced by SWPC here: (https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction)[ SWPC Enlil]. This color scale is good at clearly showing a wide range of values, so it best set to cover the entire available range.
+The custom color scale seen on the traditional Enlil product produced by SWPC here: [SWPC Enlil](https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction). This color scale is good at clearly showing a wide range of values, so it best set to cover the entire available range.
 
 ## Plots
 The timeseries plots are linked to the visualizer timeline. You will see corresponding crosshairs across the plots and the time player as you hover and move the mouse. If you click on a time of interest in a plot, the corresponding image will render in the visualizer.
