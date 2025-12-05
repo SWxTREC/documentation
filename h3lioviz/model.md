@@ -60,6 +60,7 @@ Press the Pause button or click anywhere on the timeline to stop the playing.
 ## Features
 
 ### Magnetic fieldlines
+Magnetic field lines in the solar wind model that show the structure and connectivity of the Sun's magnetic field throughout the heliosphere.
 
 ### Satellite fieldlines
 Magnetic field lines that extend from the Sun to the satellite (object orbiting the Sun) in question.
