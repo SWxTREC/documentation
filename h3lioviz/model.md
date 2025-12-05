@@ -7,7 +7,7 @@ Enlil model runs by SWPC are currently being automatically added as they become 
 
 Select a model run by clicking on its row and clicking SELECT.
 
-To select a new model run, open the model run table by clicking on the model run title at the top of the vizualization.
+To select a new model run, open the model run table by clicking on the model run title at the top of the visualization.
 
 If there are multiple values for the CME metadata in the table that means the run includes multiple CMEs.
 
