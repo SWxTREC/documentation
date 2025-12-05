@@ -51,7 +51,7 @@ The Sun to Earth line.
 The axis from north pole to the south pole on the Sun.
 
 ## Time player
-The time player along the bottom of the vizualizer shows which timestep is being displayed. You can click anywhere along the timeline to see the corresponding image. Once you have clicked the selected timeplayer timestep, you can use the right and left arrows to go forward and backwards along the timeline.
+The time player along the bottom of the visualizer shows which timestep is being displayed. You can click anywhere along the timeline to see the corresponding image. Once you have clicked the selected timeplayer timestep, you can use the right and left arrows to go forward and backwards along the timeline.
 
 Press the Play button to automatically play through the event.
 
