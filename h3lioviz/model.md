@@ -66,6 +66,8 @@ When images have been selected and playing is paused, click the download icon to
 
 The button will be reset and ready to record your next selection.
 
+The video does not allow changing the image size, so you can't resize while recording and download a video.
+
 ## Features
 
 ### Magnetic fieldlines
