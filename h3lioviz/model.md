@@ -57,6 +57,15 @@ Press the Play button to automatically play through the event.
 
 Press the Pause button or click anywhere on the timeline to stop the playing.
 
+### Saving image sequences for download
+To save a sequence of images to download as a set of images or an mp4 movie, activate the "Save image sequence" button and then select the images you want to save, either by playing through the timeline or clicking on the timeline and slowly using the arrow keys.
+
+Once there are images waiting to be downloaded, the "record" button will pulse and a download icon will appear.
+
+When images have been selected and playing is paused, click the download icon to download the images either as a series of frames or as a movie.
+
+The button will be reset and ready to record your next selection.
+
 ## Features
 
 ### Magnetic fieldlines
