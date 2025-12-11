@@ -58,15 +58,23 @@ Press the Play button to automatically play through the event.
 Press the Pause button or click anywhere on the timeline to stop the playing.
 
 ### Saving image sequences for download
-To save a sequence of images to download as a set of images or an mp4 movie, activate the "Save image sequence" button and then select the images you want to save, either by playing through the timeline or clicking on the timeline and slowly using the arrow keys.
+To save a sequence of images to download as a set of images or an mp4 movie, activate the "Save image sequence" button and then select the images you want to save.
 
-Once there are images waiting to be downloaded, the "record" button will pulse and a download icon will appear.
+An image sequence includes any new image created when:
+- playing through the timeline
+- clicking on the timeline and using the right and left arrow keys (best to wait for render between clicks)
+- clicking on different places on the timeline
+- rotating
+- snaping
+- zooming
 
-When images have been selected and playing is paused, click the download icon to download the images either as a series of frames or as a movie.
+The video does not allow changing the image size, so you can't resize while recording and then download a video.
 
-The button will be reset and ready to record your next selection.
+Once there are images saved for download, the "record" button will pulse and a download icon will appear.
 
-The video does not allow changing the image size, so you can't resize while recording and download a video.
+When the desired images have been selected and playing is paused, click the download icon to download the images either as a series of frames or as a movie.
+
+Once a download has been selected or "Save image sequence" has been deactivated (toggled), the "Save image sequence" button will reset and be ready to record your next selection once activated.
 
 ## Features
 
