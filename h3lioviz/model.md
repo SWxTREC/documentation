@@ -3,7 +3,7 @@
 This visualization tool allows interaction with the 3D output of solar wind models. The model is hosted and run in a cloud environment, enabling multiple users rapid access to large volumes of data from any browser.
 
 ## Select a model run
-Enlil model runs by SWPC are currently being automatically added as they become available.
+Enlil model runs by SWPC are currently being automatically ingested as soon as they become available.
 
 Select a model run by clicking on its row and clicking SELECT.
 
@@ -11,11 +11,15 @@ To select a new model run, open the model run table by clicking on the model run
 
 If there are multiple values for the CME metadata in the table that means the run includes multiple CMEs.
 
-- **Time at 21.5R**: Time when CME leaves the Sun.
-- **Cone half angle**: The width of the CME as input to the model run.
-- **Latitude**: The latitude of the CME as input to the model run.
-- **Longitude**: The longitude of the CME as input to the model run.
-- **Radial Velocity**: The radial velocity of the CME as input to the model run.
+**Time at 21.5R**: Time when CME leaves the Sun.
+
+**Cone half angle**: The width of the CME as input to the model run.
+
+**Latitude**: The latitude of the CME as input to the model run.
+
+**Longitude**: The longitude of the CME as input to the model run.
+
+**Radial Velocity**: The radial velocity of the CME as input to the model run.
 
 ## Mouse zoom
 Toggle whether you want to be able to zoom in and out with the mouse.
@@ -34,12 +38,11 @@ Snap to view from an oblique angle.
 Click to reset to the default zoom.
 
 ## Axes
-### X
-The axis perpendicular to the plane made by the Y and Z axes.
-### Y
-The Sun to Earth line.
-### Z
-The axis from north pole to the south pole on the Sun.
+**X** The axis perpendicular to the plane made by the Y and Z axes.
+
+**Y** The Sun to Earth line.
+
+**Z** The axis from north pole to the south pole on the Sun.
 
 ## Time player
 The time player along the bottom of the visualizer shows which timestep is being displayed. You can click anywhere along the timeline to see the corresponding image. Once you have clicked the selected timeplayer timestep, you can use the right and left arrows to go forward and backwards along the timeline.
@@ -65,34 +68,28 @@ Once there are images saved for download, the "record" button will pulse and a d
 
 When the desired images have been selected and playing is paused, click the download icon to download the images either as a series of frames or as a movie.
 
-Once a download has been selected or "Save image sequence" has been deactivated (toggled), the "Save image sequence" button will reset and be ready to record your next selection once activated.
+Once a download has been selected or "Saving image sequence" has been deactivated (toggled), the "Save image sequence" button will reset and be ready to record your next selection once activated.
 
 ## Features
 
-### Magnetic fieldlines
-Magnetic field lines in the solar wind model that show the structure and connectivity of the Sun's magnetic field throughout the heliosphere.
+**Magnetic fieldlines** Magnetic field lines in the solar wind model that show the structure and connectivity of the Sun's magnetic field throughout the heliosphere.
 
-### Satellite fieldlines
-Magnetic field lines that extend from the Sun to the satellite (object orbiting the Sun) in question.
+**Satellite fieldlines** Magnetic field lines that extend from the Sun to the satellite (object orbiting the Sun) in question.
 
-### Satellites
-Objects orbiting the Sun. Currently this includes: STEREO A, STEREO B, and Earth.
+**Satellites** Objects orbiting the Sun. Currently this includes: STEREO A, STEREO B, and Earth.
 
 ## Slices
 
-### Equatorial slice
-There are two options to select from:
+**Equatorial slice** There are two options to select from:
 
-#### Solar equator
-A plane through the solar equator.
+&nbsp;&nbsp;&nbsp;&nbsp;**Solar equator** A plane through the solar equator.
 
-#### Ecliptic
-A plane from the center of the Sun through the orbit of the Earth.
+&nbsp;&nbsp;&nbsp;&nbsp;**Ecliptic** A plane from the center of the Sun through the orbit of the Earth.
 
-### Meridional slice
+**Meridional slice**
 A plane perpendicular to the solar equator.
 
-### Radial slice at 1AU
+**Radial slice at 1AU**
 A radial surface at 1 Astronomical Unit from the Sun (approximately the distance from the Sun to the Earth).
 
 ## Surface
