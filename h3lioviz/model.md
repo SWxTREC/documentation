@@ -11,20 +11,11 @@ To select a new model run, open the model run table by clicking on the model run
 
 If there are multiple values for the CME metadata in the table that means the run includes multiple CMEs.
 
-### Time at 21.5R
-Time when CME leaves the Sun.
-
-### Cone half angle
-The width of the CME as input to the model run.
-
-### Latitude
-The latitude of the CME as input to the model run.
-
-### Longitude
-The longitude of the CME as input to the model run.
-
-### Radial Velocity
-The radial velocity of the CME as input to the model run.
+- **Time at 21.5R**: Time when CME leaves the Sun.
+- **Cone half angle**: The width of the CME as input to the model run.
+- **Latitude**: The latitude of the CME as input to the model run.
+- **Longitude**: The longitude of the CME as input to the model run.
+- **Radial Velocity**: The radial velocity of the CME as input to the model run.
 
 ## Mouse zoom
 Toggle whether you want to be able to zoom in and out with the mouse.
