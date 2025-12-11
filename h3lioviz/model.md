@@ -25,17 +25,13 @@ If there are multiple values for the CME metadata in the table that means the ru
 Toggle whether you want to be able to zoom in and out with the mouse.
 
 ## Orientation menu (globe)
-### Ecliptic
-Snap to view the ecliptic plane from above.
+**Ecliptic** Snap to view the ecliptic plane from above.
 
-### Meridional
-Snap to view the meridional plane from the side.
+**Meridional** Snap to view the meridional plane from the side.
 
-### Oblique
-Snap to view from an oblique angle.
+**Oblique** Snap to view from an oblique angle.
 
-### Reset zoom
-Click to reset to the default zoom.
+**Reset zoom** Click to reset to the default zoom.
 
 ## Axes
 **X** The axis perpendicular to the plane made by the Y and Z axes.
