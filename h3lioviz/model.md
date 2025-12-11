@@ -106,7 +106,11 @@ A radial surface at 1 Astronomical Unit from the Sun (approximately the distance
 
 ## Surface
 
-Create a surface based on the value of a variable. The surface is the 3D rendering of the colors on the 2D slices.
+Create a surface based on the value of a variable.
+
+The surface is the 3D rendering of the colors on the 2D slices.
+
+You can use the colors in the slices to target the relevant value of the selected surface. For example, select the ecliptic and meridional slices to make them visible. Color them by the relevant variable. You might see a shape or a "shock" around a CME in the planes. To view a 3D rendering, set the surface variable to the same variable and select the value that corresponds to the color of the shock you desire. You can then turn off the slices to view the selected 3D surface alone.
 
 You can drag the button on the slider to change the value of the surface or use the arrow keys to step up and down the slider.
 
@@ -140,6 +144,13 @@ Use "Divergent" or "Cool to warm" scales with the variable since it can have bot
 
 ### SWPC default colormap
 The custom color scale seen on the traditional Enlil product produced by SWPC here: [SWPC Enlil](https://www.swpc.noaa.gov/products/wsa-enlil-solar-wind-prediction). This color scale is good at clearly showing a wide range of values, so it best set to cover the entire available range.
+
+### Opacity slider
+This slider sets an opacity gradient for the colors that represent the lower values to the higher values. For example, if the lower value on the slider is 50% and the higher value is 100%, the colors that represent the lowest values in the visualization will be 50% opaque and the highest values will be 100%, or fully, opaque.
+
+If you do not desire an opacity gradient, you can set each slider to the same value for a single opacity value.
+
+Adjusting the opacity can help "see through" selected slices and surfaces.
 
 ## Plots
 The timeseries plots are linked to the visualizer timeline. You will see corresponding crosshairs across the plots and the time player as you hover and move the mouse. If you click on a time of interest in a plot, the corresponding image will render in the visualizer.
