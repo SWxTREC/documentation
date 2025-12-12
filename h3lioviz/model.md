@@ -5,7 +5,7 @@ This visualization tool affords in-depth exploration/analysis of the 3D output o
 ## Model Run Selection
 Upon launching the H3lioviz application, the user is presented with a list of available model runs (see image below), affording selection of the run of interest. Currently, results of SWPC's operational WSA-Enlil model runs are being automatically populated as they become available, in real time.
 
-<img width="920" alt="H3lioviz_run_selector_example" src="https://github.com/user-attachments/assets/b5271dd6-1848-4c24-993e-e349d45a5ad6" />
+<img width="80%" alt="H3lioviz_run_selector_example" src="https://github.com/user-attachments/assets/b5271dd6-1848-4c24-993e-e349d45a5ad6" />
 
 The Run selection menu includes 7 key metadata values (model run timing info and the CME “cone” parameters) for each run, in addition to a “More info” button affording access to the full model output metadata listing, as needed. The key metadata consists of the following fields:
 
