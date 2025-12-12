@@ -41,19 +41,25 @@ The current orientation of the reference frame (X: from Earth to the Sun, Y: per
 
 Finally, at the very bottom of the interface window are the time controls. An interactive slider here allows for immediate manipulation of the time within the model's simulated timeframe. Min/max times are displayed at respective ends of the time slider, with the currently selected time (corresponding to the position of the slider) appearing centered over the "play" button. As its nature implies, the play button initiates animation of the visualization window contents. The user may freely select any point on the timeline to immediately move to the corresponding instant. Additionally, once the timeline has been activated by mouse selection, the arrow keys may subsequently be employed to advance/regress the current time.
 
-Animations may also be exported as either sets of individual images or as mp4 movies. To do so, activate the "Save image sequence" button, complete the sequence of events you desire to be captured, and then select the appropriate download type (image set or mp4). Such animations may include any new images created, for example, when:
+### Capturing image sequences for download
+To export a sequence of images either as a set of images or an mp4 movie, click the "Capture image sequence" button.
 
-- playing through an interval of the timeline
+An image sequence includes any new image created when:
+- playing through the timeline
 - clicking on the timeline and using the right and left arrow keys (best to wait for render between clicks)
-- selecting a sequence of distinct instants on the timeline
+- clicking on different places on the timeline
 - rotating
-- snapping
+- snaping
 - zooming
 
-Note that the video does not allow changing the image size, so it is not possible to resize (including opening/closing control panel) while recording an animation. As soon as any images have been created and saved for download, the "Saving images for download" button will pulse and a download icon will appear. When all desired images have been generated, pause any animation, and downloading may be initiated by clicking the download icon and selecting the desired type of download (i.e., a series of frames or as movie). Once a download type has been selected or "Saving image sequence" has been deactivated (toggled), the "Save image sequence" button will reset and be ready to record a new sequence once activated.
+The video does not allow changing the image size (including opening/closing control panel), so you can't resize while recording and then download a video.
+
+Once you have recorded the desired image sequence, click stop.
+
+Download the images by clicking the download icon and selecting either a series of frames/images or a movie.
 
 ## Visualizer Controls
-Selecting the **SHOW CONTROLS** menu from the top left of the interface will open the visualization controls. The controls panel consists of 4 sections:
+Selecting the **SHOW CONTROLS** menu from the top left of the interface will open the visualization controls. The control panel consists of 4 sections:
 - **Features**: Activation of miscellaneous informational enhancements relating to magnetic field connectivity and indication of satellite locations.
 - **Slices**: Determination of relevant surface slices to visualize.
 - **Surface**: Controls for rendering surfaces at specified threshold values of parameters of interest (e.g., indicative of CME volume/shock surface).
