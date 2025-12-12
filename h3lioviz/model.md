@@ -5,7 +5,7 @@ This visualization tool affords in-depth exploration/analysis of the 3D output o
 ## Model Run Selection
 Upon launching the H3lioviz application, the user is presented with a list of available model runs (see image below), affording selection of the run of interest. Currently, results of SWPC's operational WSA-Enlil model runs are being automatically populated as they become available, in real time.
 
-<img width="80%" alt="H3lioviz_run_selector_example" src="https://github.com/user-attachments/assets/b5271dd6-1848-4c24-993e-e349d45a5ad6" />
+<img width="90%" alt="H3lioviz_run_selector_example" src="https://github.com/user-attachments/assets/b5271dd6-1848-4c24-993e-e349d45a5ad6" />
 
 The Run selection menu includes 7 key metadata values (model run timing info and the CME “cone” parameters) for each run, in addition to a “More info” button affording access to the full model output metadata listing, as needed. The key metadata consists of the following fields:
 
@@ -26,7 +26,7 @@ The Run selection menu includes 7 key metadata values (model run timing info and
 Upon selection of the desired model run from the selection menu, clicking “SELECT” at the bottom right will close the selection menu and load the desired model results into the visualizer. Selecting “CANCEL” will close the menu and return the user to the visualizer interface. An overview of the visualizer is shown below.
 
 ## Visualizer Components
-<img width="920" alt="Screenshot 2025-12-11 at 2 46 45 PM" src="https://github.com/user-attachments/assets/ee3cc8b2-90cc-4968-b9d1-1eb02ee51012" />
+<img width="90%" alt="Screenshot 2025-12-11 at 2 46 45 PM" src="https://github.com/user-attachments/assets/ee3cc8b2-90cc-4968-b9d1-1eb02ee51012" />
 
 The visualizer's main Menu bar includes three links: **H3lioviz**, **Visualizer**, and **Documentation**. Selecting **H3lioviz** will direct the user to the utility's splash screen. The **Visualizer** option is illustrated in the above image. Finally, **Documentation** directs to the User documentation.
 
@@ -94,7 +94,7 @@ Adjusting the opacity can help "see through" selected slices and surfaces and en
 ## Timeseries Plots
 Selecting the **SHOW PLOTS** menu from the top right of the interface will open the Plot timeseries datasets controls. By default, the model run timeseries data corresponding to the plasma density and solar wind speed at L1 are plotted (see image below).
 
-<img width="903" alt="Screenshot 2025-12-11 at 7 34 56 PM" src="https://github.com/user-attachments/assets/93063eb8-2071-43f5-a95d-3af7f645333c" />
+<img width="90%" alt="Screenshot 2025-12-11 at 7 34 56 PM" src="https://github.com/user-attachments/assets/93063eb8-2071-43f5-a95d-3af7f645333c" />
 
 The timeseries plots are linked to the visualizer timeline (in the left panel). Note the synced behavior: as the crosshairs in the plots (right panel) or in the timeline player in the visualizer (left panel), follow the mouse, the crosshairs in the complementary panel do as well. Selecting a time of interest in a plot immediately renders the corresponding image in the visualizer, and vice versa.
 
